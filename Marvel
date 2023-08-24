@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVEL WORLD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Benton+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <audio autoplay>
+    <source src="Marvel.mp3" type="audio/mpeg">
+</audio>
+    <header>
+        <nav class="navbar">
+           
+            <div class="nav-logo">
+    <img src="logo.jpg" alt="Logo">
+</div>
+
+           
+        </nav>
+    </header>
+    
+    <main>
+       <section class="center-content">
+           <div class="caption">
+        <p>Welcome to MARVEL WORLD</p>
+           </div>
+        <div class="button-container">
+            <a href="stickers.html" class="circular-button">STICKERS</a>
+            <a href="movies.html" class="circular-button">MOVIES</a>
+        </div>
+           
+    </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+   
+
+</html>
