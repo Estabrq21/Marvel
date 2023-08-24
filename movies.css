@@ -1,0 +1,174 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('blurrybackground.jpg'); 
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1; /* Place the overlay behind the content */
+}
+
+/* Navbar styles */
+.navbar {
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-logo {
+    display: flex; 
+    align-items: center; 
+     flex-grow: 1; 
+    justify-content: center;
+    
+}
+
+.nav-logo img {
+   max-width:100px; 
+  
+    margin: 0 auto;
+}
+
+.nav-right {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-left a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #FF0000;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-left a:hover {
+    background-color: #800000;
+}
+
+/* Additional styling for content */
+header, main, footer {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the overlay */
+}
+
+/* Add your existing styles here */
+/* Add your reset styles here if needed */
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1250px;  
+    padding: 20px;
+    background-color: transparent;
+    margin-left:100px;
+   
+    
+}
+
+.image-container img {
+    width:300px; 
+    height:auto;
+    margin: 20px; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for image cards */
+.image-card {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for images within image cards */
+.image-card img {
+    width: 250px;
+    height: auto;
+     display: block;
+    transition: transform 0.3s ease-in-out;
+}
+/* Darkening overlay */
+.image-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-card:hover::before {
+    opacity: 1;
+}
+
+
+/* Styling for the button container */
+.button-container {
+    position: absolute;
+    bottom:200px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-card:hover .button-container {
+    opacity: 1;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding for button size */
+    border-radius: 20px; /* Make the edges more circular */
+    background-color: #FF0000; /* Change the background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #800000; /* Change background color on hover */
+}
